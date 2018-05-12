@@ -36,3 +36,5 @@ if filereadable(expand("~/.vimrc_background"))
 endif
 
 set hlsearch
+set number
+highlight LineNr ctermbg=NONE
