@@ -12,6 +12,7 @@ Plugin 'VundleVim/Vundle.vim'
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
 Plugin 'chriskempson/base16-vim'
+Plugin 'tpope/vim-fugitive'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -28,7 +29,7 @@ filetype plugin indent on    " required
 " see :h vundle for more details or wiki for FAQ
 " Put your non-Plugin stuff after this line
 
-
+set noshowmode
 
 if filereadable(expand("~/.vimrc_background"))
   let base16colorspace=256
@@ -38,3 +39,5 @@ endif
 set hlsearch
 set number
 highlight LineNr ctermbg=NONE
+
+let g:airline_section_z ="%3l/%L:%2v"
