@@ -13,6 +13,8 @@ Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
 Plugin 'chriskempson/base16-vim'
 Plugin 'tpope/vim-fugitive'
+Plugin 'ajh17/VimCompletesMe'
+Plugin 'scrooloose/nerdtree'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -41,3 +43,13 @@ set number
 highlight LineNr ctermbg=NONE
 
 let g:airline_section_z ="%3l/%L:%2v"
+
+set mouse=a
+" set showtabline=2
+
+map <C-n> :NERDTreeToggle<CR>
+let NERDTreeShowHidden=1
+
+let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#tabline#fnamemod = ':t'
+
