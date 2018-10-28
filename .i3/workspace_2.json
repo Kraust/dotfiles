@@ -1,0 +1,86 @@
+{
+    "border": "normal",
+    "floating": "auto_off",
+    "layout": "splitv",
+    "percent": 0.5,
+    "type": "con",
+    "nodes": [
+        {
+            "border": "normal",
+            "current_border_width": 2,
+            "floating": "auto_off",
+            "geometry": {
+               "height": 2085,
+               "width": 3836,
+               "x": 3843,
+               "y": 48
+            },
+            "name": "TarkeCat - Twitch - Chromium",
+            "percent": 0.5,
+            "swallows": [
+               {
+                "class": "^Chromium$",
+                "instance": "^chromium$",
+                "transient_for": "^$",
+                "window_role": "^browser$"
+               }
+            ],
+            "type": "con"
+        },
+        {
+            "border": "normal",
+            "current_border_width": 2,
+            "floating": "auto_off",
+            "geometry": {
+               "height": 2109,
+               "width": 1276,
+               "x": 0,
+               "y": 0
+            },
+            "name": "#no-rules-i-guess - Discord",
+            "percent": 0.5,
+            "swallows": [
+               {
+                "class": "^discord$",
+                "instance": "^discord$",
+                "transient_for": "^$",
+                "window_role": "^browser\\-window$"
+               }
+            ],
+            "type": "con"
+        }
+    ]
+}
+
+{
+    "border": "normal",
+    "floating": "auto_off",
+    "layout": "splitv",
+    "percent": 0.5,
+    "type": "con",
+    "nodes": [
+        {
+            "border": "normal",
+            "current_border_width": 2,
+            "floating": "auto_off",
+            "geometry": {
+               "height": 2109,
+               "width": 3836,
+               "x": 3853,
+               "y": 34
+            },
+            "name": "i3 - ArchWiki - Chromium",
+            "percent": 1,
+            "swallows": [
+               {
+                "class": "^Chromium$",
+                "instance": "^chromium$",
+                "transient_for": "^$",
+                "window_role": "^browser$"
+               }
+            ],
+            "type": "con"
+        }
+    ]
+}
+
