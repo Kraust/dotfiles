@@ -17,8 +17,6 @@ end
 alias vim "nvim"
 alias htop "sudo htop"
 
-alias test10 "ssh rdupuis@test10.eng.cspi.com -Y"
-
 set fish_prompt_pwd_dir_length  0
 set fish_greeting
 
