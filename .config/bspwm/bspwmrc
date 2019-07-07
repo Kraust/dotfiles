@@ -1,0 +1,21 @@
+#! /bin/sh
+
+sxhkd &
+
+bspc monitor HDMI-0 -d I
+bspc monitor DP-3 -d II
+
+bspc config border_width         0
+bspc config window_gap           0
+
+bspc config split_ratio          0.52
+bspc config borderless_monocle   true
+bspc config gapless_monocle      true
+
+bspc rule -a '*' desktop=^1 state=floating
+bspc rule -a '*' desktop=^2 state=floating
+
+feh --bg-fill /home/kraust/wallpapers/6d97ba3994017bffe3e308a5acbe3132.jpg
+compton --config /home/kraust/.config/compton/compton.conf -b
+polybar top0 &
+polybar top1 &

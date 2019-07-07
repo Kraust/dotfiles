@@ -1,0 +1,111 @@
+[bar/top0]
+width = 95%
+height = 15
+offset-x = 2.5%
+offset-y = 2
+monitor = DP-3
+
+background = #5a000000
+foreground = #eee
+
+spacing = 1
+padding-left = 0
+padding-right = 0
+module-margin-left = 0 
+module-margin-right = 0
+
+font-0 = Fira Code:size=8;2
+font-1 = Font Awesome 5 Free:style=Regular:size=8;1
+font-2 = Font Awesome 5 Free:style=Solid:size=8;1
+
+wm-name = bspwm
+
+modules-left = xwindow
+modules-center = 
+modules-right = date powermenu
+
+[bar/top1]
+width = 95%
+height = 15
+offset-x = 2.5%
+offset-y = 2
+monitor = HDMI-0
+
+background = #5a000000
+foreground = #eee
+
+spacing = 1
+padding-left = 0
+padding-right = 0
+module-margin-left = 0 
+module-margin-right = 0
+
+font-0 = Fira Code:size=8;2
+font-1 = Font Awesome 5 Free:style=Regular:size=8;1
+font-2 = Font Awesome 5 Free:style=Solid:size=8;1
+
+modules-left = xwindow
+modules-center = 
+modules-right = date powermenu
+
+; MODULES
+
+[module/xwindow]
+type = internal/xwindow
+label = %title:0:120:...%
+label-padding = 1
+
+[module/date]
+type = internal/date
+
+; Seconds to sleep between updates
+interval = 1.0
+
+; See "man date" for details on how to format the date string
+; NOTE: if you want to use syntax tags here you need to use %%{...}
+date=%a %b %d
+
+; Optional time format
+time=%l:%M %p
+
+; if `date-alt` or `time-alt` is defined, clicking
+; the module will toggle between formats
+date-alt = %a %b %d
+time-alt = %l:%M %p
+
+label = %date% %time%
+#format =  <label>
+format = <label>
+format-background = #88000000
+label-padding = 1
+
+[module/padding]
+type = custom/text
+content =
+content-foreground = #00000000
+content-background = #55000000
+
+[module/powermenu]
+type = custom/menu
+
+label-open = 
+label-close =  cancel
+label-open-padding = 1
+label-close-padding = 1
+
+menu-0-0 = reboot
+menu-0-0-exec = menu-open-1
+menu-0-1 = shutdown
+menu-0-1-exec = menu-open-2
+menu-0-0-padding = 1
+menu-0-1-padding = 1
+
+menu-1-0 = reboot
+menu-1-0-exec = sudo reboot
+menu-1-0-padding = 0
+
+menu-2-0 = shutdown
+menu-2-0-exec = sudo poweroff
+menu-2-0-padding = 0
+
+
