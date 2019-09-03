@@ -1,42 +1,38 @@
+
 #
-# wm independent hotkeys
+# my modifications
 #
 
 # terminal emulator
 super + Return
-	nvim-qt +terminal
+	nvim-qt
 
-# program launcher
-super + @space
-	dmenu_run
+# firefox
+super + F1
+	firefox
 
- make sxhkd reload its configuration files:
+# make sxhkd reload its configuration files:
 super + Escape
 	pkill -USR1 -x sxhkd
 
-#
-# bspwm hotkeys
-#
+# Move windows between workspaces
+super + {1-9}
+	id=$(bspc query -N -n); bspc node -d ^{1-9};
+
+# close focused window
+super + q
+	bspc  node -c
 
 # restart bspwm
 super + r
 	bspc wm -r
 
-# close and kill
-super + {_,shift + }w
-	bspc node -{c,k}
+# open application
+super + space
+	dmenu2_run
 
-# alternate between the tiled and monocle layout
-super + m
-	bspc desktop -l next
 
-# send the newest marked node to the newest preselected node
-super + y
-	bspc node newest.marked.local -n newest.!automatic.local
-
-# swap the current node and the biggest node
-super + g
-	bspc node -s biggest
+######################
 
 #
 # state/flags
@@ -80,10 +76,6 @@ super + {o,i}
 	bspc node {older,newer} -f; \
 	bspc wm -h on
 
-# focus or send to the given desktop
-super + {_,shift + }{1-9,0}
-	bspc {desktop -f,node -d} '^{1-9,10}'
-
 #
 # preselect
 #
@@ -91,10 +83,6 @@ super + {_,shift + }{1-9,0}
 # preselect the direction
 super + ctrl + {h,j,k,l}
 	bspc node -p {west,south,north,east}
-
-# preselect the ratio
-super + ctrl + {1-9}
-	bspc node -o 0.{1-9}
 
 # cancel the preselection for the focused node
 super + ctrl + space
@@ -120,8 +108,3 @@ super + alt + shift + {h,j,k,l}
 super + {Left,Down,Up,Right}
 	bspc node -v {-20 0,0 20,0 -20,20 0}
 
-super + F1
-    /home/kraust/bin/set-factor 1
-
-super + F2
-    /home/kraust/bin/set-factor 2
